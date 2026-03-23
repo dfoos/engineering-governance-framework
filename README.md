@@ -128,6 +128,8 @@ The Standard defines the implementation.
     - [/examples/virtual-app-hosting-example.md](examples/virtual-app-hosting-example.md)
 - [/governance/](governance) — Governance overview docs  
     - [/governance/overview.md](governance/overview.md)
+    - [/governance/adr-lifecycle.md](governance/adr-lifecycle.md)
+    - [/governance/arb-triage-checklist.md](governance/arb-triage-checklist.md)
 - [/guidance/](guidance) — Decision guidance  
     - [/guidance/do-i-need-a-rfc.md](guidance/do-i-need-a-rfc.md)
     - [/guidance/do-i-need-a-standard.md](guidance/do-i-need-a-standard.md)
