@@ -140,6 +140,10 @@ The Standard defines the implementation.
     - [/standards/template.md](standards/template.md)
 - [/standards-committee/](standards-committee) — Standards Committee workflows & roles  
     - [/standards-committee/workflow.md](standards-committee/workflow.md)
+- [/tags/](tags) — Tagging system for artifacts  
+    - [/tags/README.md](tags/README.md)
+    - [/tags/tags.md](tags/tags.md)
+    - [/tags/standard.md](tags/standard.md)
 
 This structure will evolve as we migrate content from Confluence and formalize our governance model.
 
