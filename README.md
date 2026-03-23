@@ -1,4 +1,5 @@
-# **Engineering Governance Repository**
+# **Engineering Governance Framework**
+
 This repository defines how we manage architectural decisions, engineering standards, and cross‑team technical proposals. It exists to bring clarity, consistency, and velocity to how we design, build, and operate infrastructure across the organization.
 
 Over time, this repo will become the single source of truth for:
@@ -121,29 +122,36 @@ The Standard defines the implementation.
 
 - [/README.md](README.md) — This landing page  
 - [/adr/](adr) — Architecture Decision Records  
-    - [/adr/template.md](adr/template.md)
+    - [/adr/template.md](adr/template.md)  
+    - [/adr/index.md](adr/index.md)  
 - [/arb/](arb) — Architecture Review Board workflows & roles  
-    - [/arb/workflow.md](arb/workflow.md)
+    - [/arb/workflow.md](arb/workflow.md)  
 - [/examples/](examples) — Example governance documents  
-    - [/examples/virtual-app-hosting-example.md](examples/virtual-app-hosting-example.md)
+    - [/examples/virtual-app-hosting-example.md](examples/virtual-app-hosting-example.md)  
 - [/governance/](governance) — Governance overview docs  
-    - [/governance/overview.md](governance/overview.md)
-    - [/governance/adr-lifecycle.md](governance/adr-lifecycle.md)
-    - [/governance/arb-triage-checklist.md](governance/arb-triage-checklist.md)
+    - [/governance/overview.md](governance/overview.md)  
+    - [/governance/adr-lifecycle.md](governance/adr-lifecycle.md)  
+    - [/governance/arb-membership.md](governance/arb-membership.md)  
+    - [/governance/standards-committee-membership.md](governance/standards-committee-membership.md)  
+    - [/governance/cross-linking-rules.md](governance/cross-linking-rules.md)  
+    - [/governance/superseding-deprecating.md](governance/superseding-deprecating.md)  
+    - [/governance/archive-conventions.md](governance/archive-conventions.md)  
 - [/guidance/](guidance) — Decision guidance  
-    - [/guidance/do-i-need-a-rfc.md](guidance/do-i-need-a-rfc.md)
-    - [/guidance/do-i-need-a-standard.md](guidance/do-i-need-a-standard.md)
-    - [/guidance/do-i-need-an-adr.md](guidance/do-i-need-an-adr.md)
+    - [/guidance/do-i-need-a-rfc.md](guidance/do-i-need-a-rfc.md)  
+    - [/guidance/do-i-need-a-standard.md](guidance/do-i-need-a-standard.md)  
+    - [/guidance/do-i-need-an-adr.md](guidance/do-i-need-an-adr.md)  
 - [/rfc/](rfc) — Requests for Comment  
-    - [/rfc/template.md](rfc/template.md)
+    - [/rfc/template.md](rfc/template.md)  
+    - [/rfc/index.md](rfc/index.md)  
 - [/standards/](standards) — Engineering Standards (living documents)  
-    - [/standards/template.md](standards/template.md)
+    - [/standards/template.md](standards/template.md)  
+    - [/standards/index.md](standards/index.md)  
 - [/standards-committee/](standards-committee) — Standards Committee workflows & roles  
-    - [/standards-committee/workflow.md](standards-committee/workflow.md)
+    - [/standards-committee/workflow.md](standards-committee/workflow.md)  
 - [/tags/](tags) — Tagging system for artifacts  
-    - [/tags/README.md](tags/README.md)
-    - [/tags/tags.md](tags/tags.md)
-    - [/tags/standard.md](tags/standard.md)
+    - [/tags/README.md](tags/README.md)  
+    - [/tags/tags.md](tags/tags.md)  
+    - [/tags/standard.md](tags/standard.md)  
 
 This structure will evolve as we migrate content from Confluence and formalize our governance model.
 
@@ -173,14 +181,3 @@ Both groups will have:
 Templates and workflows will be added under their respective directories.
 
 ---
-
-# **Next Steps**
-This repo is the foundation for a cleaner, faster, and more predictable engineering governance model. Upcoming additions will include:
-
-- ADR and RFC templates  
-- Standards templates  
-- ARB workflow and SLA  
-- Standards Committee workflow  
-- Migration plan for existing Confluence content  
-- Decision tree for “Do I need an ADR?”  
-- Examples of good RFCs, ADRs, and Standards  
