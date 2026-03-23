@@ -165,3 +165,7 @@ When exploring ideas without committing to a decision.
 | **Standard** | Define ongoing rules | When documenting required practices | Living, versioned guidance |
 
 ---
+
+# **Overview of the Engineering Governance Framework**
+
+The Engineering Governance Framework provides a structured approach to managing architectural decisions, engineering standards, and governance workflows. This document outlines the purpose and structure of the framework.
