@@ -18,19 +18,20 @@ If you’re defining rules or conventions for day‑to‑day engineering → you
 # **Decision Tree**
 
 ```
-                     ┌──────────────────────────────────┐
-                     │ Is this guidance something        │
-                     │ multiple teams must follow        │
-                     │ on an ongoing basis?              │
-                     └───────────────┬──────────────────┘
-                                     │
-                            Yes      │       No
-                                     │
-                                     ▼
-            ┌──────────────────────────────────────────────┐
-            │ You need a Standard. This becomes part of     │
-            │ the living engineering rules.                 │
-            └──────────────────────────────────────────────┘
+                     ┌──────────────────────────────────────┐
+                     │ Is this guidance something           │
+                     │ multiple teams must follow           │
+                     │ on an ongoing basis?                 │
+                     └──────────────────┬───────────────────┘
+                                        │
+                            ├── No  → See guidance below
+                            └── Yes
+                                        │
+                                        ▼
+            ┌──────────────────────────────────────────────────┐
+            │ You need a Standard. This becomes part of        │
+            │ the living engineering rules.                    │
+            └──────────────────────────────────────────────────┘
 
 
 If “No”:
