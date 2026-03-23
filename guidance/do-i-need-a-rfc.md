@@ -20,18 +20,19 @@ You do **not** need an RFC when:
 # **Decision Tree**
 
 ```
-                     ┌──────────────────────────────────┐
-                     │ Do you need input or alignment    │
-                     │ from multiple teams BEFORE        │
-                     │ making a decision?                │
-                     └───────────────┬──────────────────┘
-                                     │
-                            Yes      │       No
-                                     │
-                                     ▼
-            ┌──────────────────────────────────────────────┐
-            │ You need an RFC. Use it to gather feedback.   │
-            └──────────────────────────────────────────────┘
+                     ┌──────────────────────────────────────┐
+                     │ Do you need input or alignment       │
+                     │ from multiple teams BEFORE           │
+                     │ making a decision?                   │
+                     └──────────────────┬───────────────────┘
+                                        │
+                            ├── No  → See guidance below
+                            └── Yes
+                                        │
+                                        ▼
+            ┌──────────────────────────────────────────────────┐
+            │ You need an RFC. Use it to gather feedback.      │
+            └──────────────────────────────────────────────────┘
 
 
 If “No”:
