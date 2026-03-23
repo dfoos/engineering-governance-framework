@@ -23,9 +23,8 @@ Technology tags identify the platforms, languages, frameworks, and tools involve
 | `helm` | Helm package manager |
 | `monitoring` | Monitoring, observability, and alerting |
 | `logging` | Logging and log aggregation |
-| `security` | Security tooling and controls |
-| `dns` | Domain Name System |
-| `networking` | Network infrastructure and connectivity |
+| `security-tools` | Security tooling and controls |
+| `networking-tools` | Network infrastructure and connectivity |
 | `storage` | Data storage and persistence |
 | `database` | Database systems |
 | `messaging` | Message queues and event streaming |
@@ -41,8 +40,8 @@ Domain tags identify the organizational or technical domain affected by the deci
 |-----|-------------|
 | `platform` | Platform engineering and infrastructure |
 | `devops` | DevOps practices and tooling |
-| `security` | Security and compliance |
-| `networking` | Networking and connectivity |
+| `security` | Security and compliance (organizational domain) |
+| `networking` | Networking and connectivity (organizational domain) |
 | `identity` | Identity and access management (IAM) |
 | `operations` | Operational procedures and runbooks |
 | `applications` | Application development and deployment |
