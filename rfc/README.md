@@ -11,6 +11,7 @@ This directory contains all Requests for Comment (RFCs) for the organization. RF
 1. **Browse RFCs**: Use the [RFC Catalog](catalog.md) to find specific RFCs.
 2. **Propose Changes**: Submit a new RFC using the [RFC Template](template.md).
 3. **Track Status**: Check the status of RFCs in the catalog (e.g., Draft, Accepted, Rejected).
+4. **Review SLAs**: Refer to the [SLA Document](../governance/sla.md) for timeframes related to RFC reviews.
 
 ### **Key Files**
 - [RFC Catalog](catalog.md): Overview of all RFCs.
