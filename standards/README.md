@@ -11,6 +11,7 @@ This directory contains all Engineering Standards for the organization. Standard
 1. **Browse Standards**: Use the [Standards Catalog](catalog.md) to find specific standards.
 2. **Propose Changes**: Submit an RFC or update an existing standard as needed.
 3. **Follow Conventions**: Ensure new standards follow the [Standards Template](template.md).
+4. **Review SLAs**: Refer to the [SLA Document](../governance/sla.md) for timeframes related to Standards updates.
 
 ### **Key Files**
 - [Standards Catalog](catalog.md): Overview of all standards.
