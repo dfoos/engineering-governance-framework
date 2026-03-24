@@ -39,6 +39,12 @@ This document defines the Service Level Agreements (SLAs) for governance process
 - **Responsibility**: Artifact owners and relevant governance bodies.
 - **Escalation**: Escalate to the respective governance body facilitator if delays occur.
 
+#### **6. ARB Triage SLA**
+- **Purpose**: Ensure ADRs are triaged promptly to determine the appropriate review path.
+- **Timeframe**: ADRs must be triaged within **2 business days** of submission.
+- **Responsibility**: ARB Facilitator or designated reviewer.
+- **Escalation**: If triage is not completed within the SLA, escalate to ARB member.
+
 ---
 
 ### **SLA Compliance and Monitoring**
