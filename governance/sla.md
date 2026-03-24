@@ -16,6 +16,7 @@ This document defines the Service Level Agreements (SLAs) for governance process
 - **Purpose**: Ensure low-risk architectural decisions are reviewed promptly.
 - **Timeframe**: ADRs must be reviewed within **5 business days** of submission.
 - **Responsibility**: ARB members.
+- **Process**: If no objections are raised within the SLA, the ADR is **auto-approved (lazy consensus)**.
 - **Escalation**: If no decision is made within the SLA, escalate to the ARB facilitator.
 
 #### **3. ADR Full Review SLA**
