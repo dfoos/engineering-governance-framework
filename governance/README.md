@@ -14,6 +14,7 @@ This directory contains all documentation related to governance processes, workf
    - [Cross-Linking Rules](cross-linking-rules.md)
 2. **Follow Lifecycles**: Review the lifecycle documentation for RFCs, ADRs, and Standards.
 3. **Adhere to Conventions**: Ensure compliance with superseding, deprecating, and archiving conventions.
+4. **Review SLAs**: Refer to the [SLA Document](sla.md) for timeframes related to governance processes.
 
 ### **Key Files**
 - [ARB Membership](arb-membership.md): Defines ARB membership structure.
