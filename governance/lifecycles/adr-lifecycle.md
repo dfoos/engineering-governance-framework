@@ -50,8 +50,8 @@ ADR is complete, internally reviewed, and ready for ARB triage.
 ---
 
 ## 3.2 ARB Triage
-**Owner:** ARB Facilitator or designated reviewer  
-**Duration:** 1–2 business days  
+**Owner:** ARB Chair or designated reviewer  
+**Duration:** Refer to the [ARB Triage SLA](../sla.md#6-arb-triage-sla)  
 
 Every ADR is categorized into one of three review paths:
 
