@@ -62,7 +62,7 @@ Criteria:
 
 Process:
 - ARB reviews asynchronously  
-- **5 business‑day SLA**  
+- SLA: Refer to the [Lightweight Review SLA](../governance/sla.md#2-adr-lightweight-review-sla)  
 - If no objections → **auto‑approved (lazy consensus)**  
 
 Outcome:
@@ -79,8 +79,8 @@ Criteria:
 
 Process:
 - Added to next ARB meeting agenda  
+- SLA: Refer to the [Full Review SLA](../governance/sla.md#3-adr-full-review-sla)  
 - Discussion and decision recorded  
-- **10 business‑day SLA**  
 
 Outcome:
 - Accepted  
