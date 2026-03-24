@@ -154,13 +154,13 @@ This prevents governance drift and documentation rot.
 
 # 4. Review Cadence Summary
 
-| Activity | Owner | Cadence | SLA |
-|---------|--------|---------|-----|
-| ADR Triage | ARB | Daily or every other day | 1–2 days |
-| Category B Review | ARB | Async | 5 days |
-| Category C Review | ARB | Weekly meeting | 10 days |
-| Standards Updates | Standards Committee | Bi-weekly | N/A |
-| Governance Cleanup | ARB + Standards Committee | Quarterly | N/A |
+| Activity            | Owner                  | Cadence               | SLA                                                                 |
+|---------------------|-----------------------|-----------------------|---------------------------------------------------------------------|
+| ADR Triage          | ARB                   | Daily or every other day | Refer to the [ARB Triage SLA](../sla.md#6-arb-triage-sla)            |
+| Category B Review   | ARB                   | Async                 | Refer to the [Lightweight Review SLA](../sla.md#2-adr-lightweight-review-sla) |
+| Category C Review   | ARB                   | Weekly meeting        | Refer to the [Full Review SLA](../sla.md#3-adr-full-review-sla)      |
+| Standards Updates   | Standards Committee   | Bi-weekly             | N/A                                                                 |
+| Governance Cleanup  | ARB + Standards Committee | Quarterly          | N/A                                                                 |
 
 ---
 
