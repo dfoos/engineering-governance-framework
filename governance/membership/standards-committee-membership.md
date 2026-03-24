@@ -19,6 +19,13 @@ Temporary Members are invited to participate in the Standards Committee on a cas
 - Contributing specialized knowledge.
 - Supporting decision-making for specific initiatives.
 
+### 2.3 Facilitator
+The Facilitator, typically a Manager from the Engineering team, ensures that Standards Committee meetings are productive and that decisions are documented and communicated effectively. The Facilitator is not a voting member but plays a critical role in:
+- Scheduling and organizing meetings.
+- Ensuring adherence to governance processes.
+- Documenting decisions and action items.
+- Communicating outcomes to relevant stakeholders.
+
 ---
 
 ## 3. Membership Types: Roles and Responsibilities
@@ -32,6 +39,11 @@ Temporary Members are invited to participate in the Standards Committee on a cas
 - Participate in discussions relevant to their expertise.
 - Provide input on specific projects or initiatives.
 - Step down once their contributions are complete.
+
+### Facilitator
+- Ensure that meetings are productive and well-structured.
+- Document decisions and action items.
+- Communicate outcomes to relevant stakeholders.
 
 ---
 
