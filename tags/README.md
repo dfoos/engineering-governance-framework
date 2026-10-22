@@ -18,6 +18,23 @@ Labels enable:
 - **Governance Reporting**: Analyze trends in decision-making and identify gaps
 - **Navigation**: Engineers know instantly which artifacts are relevant to their work
 
+Labels are deliberately secondary metadata. Classification should follow this
+order:
+
+```text
+if artifact is an ADR or Standard:
+    assign taxonomy from governance/taxonomy.md
+if artifact is an RFC:
+    do not assign taxonomy
+    optionally assign proposed-taxonomy for resulting records
+if a product, technology, team, or lifecycle value improves search:
+    add it as an optional label
+```
+
+Do not create a label to compensate for a missing taxonomy branch. Propose a
+taxonomy change when the architectural structure is insufficient; use a label
+for implementation or discovery details.
+
 ---
 
 ## **Label Categories**

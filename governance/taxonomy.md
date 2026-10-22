@@ -375,7 +375,15 @@ Implemented
 
 ---
 
-## 8. Registries
+## 8. Illustrative Registry Examples
+
+The following tables demonstrate the recommended registry fields and
+relationships. They are illustrative examples, not the authoritative contents
+of this repository. The authoritative registries are:
+
+- [ADR Registry](../adr/catalog.md)
+- [Standards Registry](../standards/catalog.md)
+- [RFC Registry](../rfc/catalog.md)
 
 Maintain a registry for each document type. Registries are the source for the next available ID and the primary index for duplicate detection.
 
@@ -404,25 +412,31 @@ Never reuse an ID, including after a record is rejected, withdrawn, superseded, 
 
 ---
 
-## 9. Recommended Repository Structure
+## 9. Repository Structure
+
+This repository uses one `catalog.md` registry per document type rather than
+separate `index.md` and `catalog.md` files.
 
 ```text
 architecture-governance/
 ├── README.md
-├── taxonomy.md
-├── agent-instructions.md
+├── governance/
+│   └── taxonomy.md
 ├── adr/
-│   ├── registry.md
+│   ├── catalog.md
+│   ├── README.md
 │   ├── template.md
-│   └── ADR-0001-multi-account-cloud-landing-zone.md
+│   └── ADR-####-short-title.md
 ├── standards/
-│   ├── registry.md
+│   ├── catalog.md
+│   ├── README.md
 │   ├── template.md
-│   └── STD-0001-cloud-resource-naming.md
+│   └── STD-####-short-title.md
 └── rfc/
-    ├── registry.md
+    ├── catalog.md
+    ├── README.md
     ├── template.md
-    └── RFC-0001-managed-kubernetes.md
+    └── RFC-####-short-title.md
 ```
 
 ---
@@ -476,7 +490,57 @@ labels: [kubernetes, platform]
 
 ---
 
-## 11. Rules
+## 11. Status Model
+
+Statuses are authoritative document metadata. Labels such as `active` or
+`proposed` may be used for discovery, but must not replace `status`.
+
+| Document | Allowed statuses |
+|---|---|
+| ADR | `proposed`, `accepted`, `rejected`, `superseded`, `archived` |
+| Standard | `draft`, `active`, `deprecated`, `superseded`, `archived` |
+| RFC | `draft`, `in-review`, `approved`, `rejected`, `withdrawn`, `superseded`, `implemented`, `archived` |
+
+An RFC may be `approved` for implementation without producing an ADR. An RFC
+is `implemented` when its proposal has been carried out or its resulting
+records are published. ADRs are immutable after acceptance; archival preserves
+history and does not change the decision.
+
+## 12. Validation Rules
+
+Automated or review-based validation MUST confirm:
+
+1. Each registry ID is unique, permanent, and uses the correct prefix and four-digit number.
+2. ADR and Standard taxonomy values are either `DDDD` or `DDDD.SSSS`.
+3. The primary `DDDD` value exists in the primary architecture classifications.
+4. A reusable `SSSS` value exists in the reusable classifications.
+5. `2000.SSSS` is used only for global reusable concerns; scoped concerns use `DDDD.2xxx`.
+6. RFCs do not contain `taxonomy`; `proposed-taxonomy` is optional and follows the same format.
+7. Every relationship points to an ID present in the corresponding registry.
+8. Every catalog link points to an existing document file when a file has been published.
+9. The document status is allowed for its document type.
+10. Superseded records identify their replacement, and IDs are never reused.
+
+Illustrative validation pseudocode:
+
+```text
+for each registry:
+    assert ids_are_unique(registry)
+    assert ids_are_never_reused(registry_history)
+    for record in registry:
+        assert status_allowed(record.type, record.status)
+        assert relationships_exist(record)
+        assert linked_file_exists_if_published(record)
+
+for adr_or_standard in adr_registry + standards_registry:
+    assert valid_taxonomy(adr_or_standard.taxonomy)
+
+for rfc in rfc_registry:
+    assert rfc.taxonomy is absent
+    assert rfc.proposed_taxonomy is absent or valid_taxonomy(rfc.proposed_taxonomy)
+```
+
+## 13. Rules
 
 1. Document identifiers are permanent and independent of taxonomy.
 2. Taxonomy values are classifications, not unique identifiers.
@@ -494,10 +558,14 @@ labels: [kubernetes, platform]
 14. Link related RFCs, ADRs, and Standards.
 15. Search current and historical records before creating a new one.
 16. Supersede an existing record when a decision or requirement is replaced.
+17. Exceptions are governance records, not reusable taxonomy classifications.
+18. An exception MUST reference the Standard or ADR it modifies or deviates from,
+    inherit that record's taxonomy for discovery, and include an owner,
+    justification, approval, scope, and expiration date.
 
 ---
 
-## 12. Quick Classification Guide
+## 14. Quick Classification Guide
 
 ### ADR or Standard
 
@@ -513,6 +581,18 @@ Everything else
 → Record as metadata.
 ```
 
+### Exception
+
+```text
+Exceptions are governance records, not reusable taxonomy classifications.
+An exception MUST reference the Standard or ADR it modifies or deviates from.
+It inherits that record's taxonomy for discovery.
+It MUST include an owner, justification, approval, scope, and expiration date.
+```
+
+Use the [Exception Request Template](exception-template.md) for the complete
+request and approval record.
+
 ### RFC
 
 ```text
@@ -524,7 +604,7 @@ Do not classify the RFC itself.
 
 ---
 
-## 13. AI Agent Prompt
+## 15. AI Agent Prompt
 
 Use the following as starting system instructions for an AI agent that works with the repository.
 
@@ -539,9 +619,9 @@ AUTHORITATIVE SOURCES
 
 Before making a recommendation, read:
 1. taxonomy.md
-2. adr/registry.md
-3. standards/registry.md
-4. rfc/registry.md
+2. adr/catalog.md
+3. standards/catalog.md
+4. rfc/catalog.md
 5. Relevant ADR, Standard, and RFC files
 6. The applicable template
 
@@ -725,7 +805,7 @@ Perform the following:
 
 ---
 
-## 14. Bottom Line
+## 16. Bottom Line
 
 Use three independent document sequences:
 

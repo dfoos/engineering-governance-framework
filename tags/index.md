@@ -7,16 +7,17 @@ taxonomy.
 
 ---
 
-## Artifacts by Tag
+## Current Label Views
 
-### `cloud`
-- [RFC 001: Cloud Governance](../rfc/rfc-001-cloud-governance.md)
+No maintained label view is currently published. The artifact registries are
+the authoritative discovery surfaces:
 
-### `terraform`
-- [ADR 001: Terraform Standardization](../adr/adr-001-terraform-standardization.md)
+- [ADR Registry](../adr/catalog.md)
+- [RFC Registry](../rfc/catalog.md)
+- [Standards Registry](../standards/catalog.md)
 
-### `security`
-- [Standard: Security Baseline v1.0](../standards/standard-security-baseline-v1.0.md)
+Add a label view only when it is generated from existing artifact metadata or
+manually maintained alongside real document files.
 
 ---
 

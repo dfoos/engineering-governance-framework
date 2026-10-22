@@ -154,9 +154,9 @@ branch or record.
 - [/governance/](governance) — Governance overview docs  
     - [/governance/taxonomy.md](governance/taxonomy.md)
     - [/governance/overview.md](governance/overview.md)  
-    - [/governance/adr-lifecycle.md](governance/adr-lifecycle.md)  
-    - [/governance/arb-membership.md](governance/arb-membership.md)  
-    - [/governance/standards-committee-membership.md](governance/standards-committee-membership.md)  
+    - [/governance/lifecycles/adr-lifecycle.md](governance/lifecycles/adr-lifecycle.md)
+    - [/governance/membership/arb-membership.md](governance/membership/arb-membership.md)
+    - [/governance/membership/standards-committee-membership.md](governance/membership/standards-committee-membership.md)
     - [/governance/cross-linking-rules.md](governance/cross-linking-rules.md)  
     - [/governance/superseding-deprecating.md](governance/superseding-deprecating.md)  
     - [/governance/archive-conventions.md](governance/archive-conventions.md)  

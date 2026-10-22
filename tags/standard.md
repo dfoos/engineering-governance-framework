@@ -136,7 +136,7 @@ Engineers can search for tags in multiple ways:
 
 ---
 
-## **Governance of Tags**
+## **Governance of Optional Labels**
 
 ### **Adding New Tags**
 New tags are proposed and approved through the Standards Committee:

@@ -8,8 +8,8 @@ Standards.
 
 | **ID** | **Title**                          | **Description**                                                                 | **Proposed Taxonomy** | **Status**   | **Last Updated** |
 |--------|------------------------------------|---------------------------------------------------------------------------------|-----------------------|--------------|------------------|
-| RFC-0001 | [Virtual App Hosting](virtual-app-hosting.md) | Proposal for hosting virtual applications on shared infrastructure.             | `6200.2400` | Draft        | 2026-02-20       |
-| RFC-0002 | [Adopt Kubernetes](adopt-kubernetes.md) | Proposal to adopt Kubernetes for container orchestration.                       | `5400.2400` | Accepted     | 2026-01-10       |
+| RFC-0001 | [Virtual App Hosting](../examples/virtual-app-hosting-example.md) | Proposal for hosting virtual applications on shared infrastructure. | `6200.2400` | Draft | 2026-02-20 |
+| RFC-0002 | Adopt Kubernetes | Proposal to adopt Kubernetes for container orchestration. | `5400.2400` | Accepted | 2026-01-10 |
 
 ---
 
@@ -25,7 +25,7 @@ Standards.
 
 ### **How to Use This Catalog**
 1. **Find an RFC**: Use the table above to locate the RFC you need.
-2. **View Details**: Click on the title to view the full document.
+2. **View Details**: Follow the document link when one is present.
 3. **Propose Changes**: To update or supersede an RFC, submit a new RFC or ADR.
 
 Add every new RFC to this registry; do not create a separate index.
