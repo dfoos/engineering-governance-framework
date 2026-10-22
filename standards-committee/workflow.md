@@ -12,6 +12,7 @@ The committee ensures:
 - Clear, versioned Standards that engineers can rely on  
 - Rapid updates to Standards as technology evolves  
 - Alignment with architectural decisions defined by ADRs  
+- Valid taxonomy classifications for every Standard
 
 The committee does **not** approve architectural decisions — that is the ARB’s responsibility.
 
@@ -53,6 +54,7 @@ Updating a Standard does **not** require an ADR unless the underlying architectu
 Committee members review for:
 - Technical accuracy  
 - Alignment with existing Standards  
+- Appropriate primary and optional reusable taxonomy classifications
 - Clarity and usability  
 - Cross‑domain impact  
 
@@ -67,6 +69,8 @@ Approval requires:
 ### Step 4 — Versioning
 Upon approval:
 - Standard is versioned (e.g., v1.3 → v1.4)  
+- Permanent `STD-####` ID is retained
+- Taxonomy is validated against [governance/taxonomy.md](../governance/taxonomy.md)
 - Changelog is updated  
 - Standard is merged  
 
@@ -114,6 +118,7 @@ Members are expected to:
 - **Fast iteration** — Standards should evolve quickly as technology changes  
 - **Minimal bureaucracy** — updates should be lightweight and reviewable  
 - **Version everything** — no silent changes  
+- **Classify durably** — use architecture concern for taxonomy, not vendor or product names
 
 ---
 

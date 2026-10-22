@@ -21,6 +21,8 @@ This illustrates:
 **Related To:** Future ADR on Virtual Application Hosting  
 **Urgency:** High  
 **Date Created:** 2026-03-23  
+**Status:** In Review
+**Proposed Taxonomy:** `6200.2400` (Application Platforms / Design)
 
 ---
 
@@ -112,6 +114,7 @@ The key words **“MUST”, “SHOULD”, “MAY”** etc. are interpreted as de
 **Contributors:** Cloud Engineering, EUC Engineering  
 **Target Audience:** Platform Engineering, EUC, Cloud Teams  
 **Linked RFCs:** RFC-0001  
+**Taxonomy:** `6200.2400` (Application Platforms / Design)
 
 ---
 
@@ -191,6 +194,7 @@ The key words **“MUST”, “SHOULD”, “MAY”** etc. are interpreted as de
 **Last Updated:** 2026-04-05  
 **Related ADRs:** ADR-0001  
 **Related RFCs:** RFC-0001  
+**Taxonomy:** `6200.2400` (Application Platforms / Design)
 
 ---
 
@@ -308,4 +312,3 @@ This is exactly how the governance model is intended to work:
 **RFC → ADR → Standard → Implementation**
 
 ---
-

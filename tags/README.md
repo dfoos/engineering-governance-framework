@@ -1,14 +1,16 @@
-# **Tagging System**
+# **Optional Metadata Labels**
 
-This directory defines the tagging system for RFCs, ADRs, and Standards. Tags improve discoverability, cross-referencing, and governance of engineering decisions across the organization.
+This directory defines optional metadata labels for RFCs, ADRs, and Standards. Labels improve discoverability and cross-referencing; they do not replace the shared architecture taxonomy.
+
+The authoritative taxonomy is [governance/taxonomy.md](../governance/taxonomy.md). ADRs and Standards MUST use that taxonomy. RFCs do not receive taxonomy, but MAY include `proposed-taxonomy` metadata for resulting ADRs or Standards.
 
 ---
 
 ## **What Are Tags?**
 
-Tags are short, lowercase labels applied to every RFC, ADR, and Standard to categorize and relate artifacts across technology, domain, impact, and lifecycle.
+Labels are short, lowercase metadata values used when they add discovery value, for example technology, team, lifecycle, or impact.
 
-Tags enable:
+Labels enable:
 
 - **Quick Discovery**: Find all decisions related to a technology, domain, or impact level
 - **Cross-Referencing**: Understand how decisions in different domains connect
@@ -18,9 +20,9 @@ Tags enable:
 
 ---
 
-## **Five Tag Categories**
+## **Label Categories**
 
-Tags are organized into five categories:
+Labels may describe:
 
 ### **1. Technology Tags**
 Identify platforms, languages, frameworks, and tools: `kubernetes`, `terraform`, `aws`, `azure`, `cicd`, etc.
@@ -32,20 +34,20 @@ Identify organizational or technical domains: `platform`, `devops`, `security`, 
 
 **Use when**: The artifact affects a specific domain; typically one per artifact.
 
-### **3. Category Tags**
+### **3. Category Labels**
 Describe the nature of the decision: `pattern`, `policy`, `operational`, `migration`, `tool-selection`, `naming-convention`, `security-baseline`, etc.
 
-**Use when**: Every artifact needs exactly one category tag.
+**Use when**: The label adds useful discovery context.
 
 ### **4. Impact Tags**
 Describe scope and significance: `breaking-change`, `high-impact`, `low-impact`, `org-wide`, `team-local`, `strategic`, etc.
 
 **Use when**: You want to quickly assess the blast radius of a decision.
 
-### **5. Lifecycle Tags**
+### **5. Lifecycle Labels**
 Indicate the current state: `active`, `proposed`, `superseded`, `deprecated`, `archived`, `on-hold`.
 
-**Use when**: Every artifact needs exactly one lifecycle tag.
+**Use when**: A workflow tool or report needs a searchable status label. The document `status` field remains authoritative.
 
 ---
 
@@ -53,11 +55,11 @@ Indicate the current state: `active`, `proposed`, `superseded`, `deprecated`, `a
 
 ### **Quick Start**
 
-Add a `tags:` field to the top of your RFC, ADR, or Standard file:
+Add an optional `labels:` field to the top of a document:
 
 ```yaml
 ---
-tags: [category-tag, lifecycle-tag, domain-tag, impact-tag, technology-tag]
+labels: [kubernetes, platform]
 ---
 
 # Title of Your Artifact
@@ -66,8 +68,8 @@ tags: [category-tag, lifecycle-tag, domain-tag, impact-tag, technology-tag]
 ### **Rules**
 
 - **All lowercase**: Hyphens for multi-word tags (e.g., `tool-selection`, not `toolSelection`)
-- **Minimum five tags**: One from each category (Category, Lifecycle, Domain, Impact, and optionally Technology)
-- **Maximum reasonable**: Use as many tags as needed for clarity, but avoid over-tagging
+- **No minimum**: Use labels only when they improve discovery
+- **Maximum reasonable**: Use as many labels as needed for clarity, but avoid over-labeling
 - **Only approved tags**: See [tags.md](tags.md) for the complete list
 - **No duplicates**: Do not use the same tag twice in one artifact
 
@@ -76,21 +78,21 @@ tags: [category-tag, lifecycle-tag, domain-tag, impact-tag, technology-tag]
 **RFC: Tool Evaluation**
 ```yaml
 ---
-tags: [tool-selection, proposed, platform, high-impact, kubernetes]
+labels: [kubernetes, platform]
 ---
 ```
 
 **ADR: Infrastructure Pattern**
 ```yaml
 ---
-tags: [pattern, active, platform, org-wide, terraform, aws]
+labels: [terraform, aws, platform]
 ---
 ```
 
 **Standard: Naming Convention**
 ```yaml
 ---
-tags: [naming-convention, active, networking]
+labels: [naming-convention, networking]
 ---
 ```
 
@@ -156,7 +158,7 @@ New tags should be:
 
 ### **Do**
 - ✅ Use tags consistently to improve searchability
-- ✅ Include at least one tag from each required category
+- ✅ Use labels only when they improve discovery
 - ✅ Update tags if an artifact's status changes (e.g., `proposed` → `active`)
 - ✅ Use technology tags to identify cross-cuts (e.g., all Kubernetes decisions)
 - ✅ Review and update tags during artifact reviews
@@ -166,7 +168,7 @@ New tags should be:
 - ❌ Over-tag with redundant tags (e.g., both `aws` and `cloud`)
 - ❌ Forget to update tags when an artifact changes status or scope
 - ❌ Tag team-specific decisions as `org-wide`
-- ❌ Leave an artifact untagged
+- ❌ Use labels as a substitute for taxonomy or document status
 
 ---
 
@@ -183,7 +185,7 @@ If you have questions about tagging:
 
 ## **Next Steps**
 
-All new artifacts must be tagged immediately. Existing artifacts will be tagged during the next review cycle.
+New artifacts MAY include labels immediately. Existing labels should be migrated only when they provide useful discovery metadata.
 
 **Start tagging today** — it takes 30 seconds and makes decisions much easier to find.
 

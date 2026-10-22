@@ -22,7 +22,7 @@ Before assigning a category, confirm the ADR meets baseline requirements.
 - [ ] Status is set to **Proposed**  
 - [ ] Owner(s) identified  
 - [ ] Contributors listed (if applicable)  
-- [ ] Tags applied and valid per `tags.md`  
+- [ ] ADR has a valid taxonomy, primary classification, and optional reusable classification per [taxonomy.md](../governance/taxonomy.md)
 - [ ] Linked RFCs included (if applicable)  
 - [ ] Supporting documentation links provided  
 
@@ -112,12 +112,12 @@ If clarity or technical soundness is insufficient:
 - [ ] Redirect to Standards Committee if appropriate  
 
 ### 4.2 If Category B
-- [ ] Label ADR as `category-b`  
+- [ ] Record the triage category in the review workflow or issue metadata
 - [ ] Notify ARB members for async review  
 - [ ] Set 5‑day lazy consensus window  
 
 ### 4.3 If Category C
-- [ ] Label ADR as `category-c`  
+- [ ] Record the triage category in the review workflow or issue metadata
 - [ ] Add to next ARB meeting agenda  
 - [ ] Notify ARB members and ADR owner  
 
@@ -126,7 +126,7 @@ If clarity or technical soundness is insufficient:
 # 5. Documentation & Tracking
 
 - [ ] Update ADR index (if maintained manually)  
-- [ ] Ensure tags reflect categorization  
+- [ ] Ensure taxonomy reflects the architectural concern; use optional labels only for discovery
 - [ ] Ensure ADR status remains **Proposed** until approved  
 - [ ] Confirm linked Standards are flagged for potential updates  
 

@@ -125,4 +125,8 @@ If the guidance explains **why** a major decision was made, you need an ADR.
 
 If the guidance is still being debated, you need an RFC.
 
+Every Standard must use the shared taxonomy to identify the architecture area
+that owns the requirement. Add a reusable classification only when it adds
+useful cross-cutting meaning; use metadata labels for products and technologies.
+
 ---

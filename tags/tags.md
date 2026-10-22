@@ -1,8 +1,8 @@
 # **Approved Tags**
 
-This document defines all approved tags for RFCs, ADRs, and Standards. Tags are lowercase, short, and consistently applied to improve discoverability and cross-referencing across governance artifacts.
+This document defines optional approved metadata labels for RFCs, ADRs, and Standards. Labels are lowercase, short, and used only when they improve discovery. They do not replace taxonomy.
 
-Tags are organized into five categories: **Technology**, **Domain**, **Category**, **Impact**, and **Lifecycle**.
+Labels are organized into five categories: **Technology**, **Domain**, **Category**, **Impact**, and **Lifecycle**.
 
 ---
 
@@ -102,10 +102,10 @@ Lifecycle tags indicate the current state of an artifact or decision.
 
 ---
 
-## **Tag Usage Rules**
+## **Label Usage Rules**
 
-1. **Minimum Tags**: Every artifact must have at least one tag from **Category** and one from **Lifecycle**.
-2. **Technology Tags**: Add technology tags only if the artifact discusses or affects a specific technology.
+1. **Optional**: Artifacts may use labels; there is no minimum label count.
+2. **Technology Labels**: Add technology labels only if the artifact discusses or affects a specific technology.
 3. **Domain Tags**: Add domain tags to indicate the primary domain affected.
 4. **Impact Tags**: RFCs and ADRs should include impact tags; Standards should include them if relevant.
 5. **Multiple Tags**: Artifacts may have multiple tags from any category; use as many as needed for clarity.

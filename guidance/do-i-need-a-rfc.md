@@ -132,4 +132,8 @@ RFCs are for thinking.
 ADRs are for deciding.  
 Standards are for doing.
 
+An RFC receives only its permanent sequential ID and workflow status. Do not
+assign it an architecture taxonomy. If useful, record `proposed-taxonomy` as
+guidance for an ADR or Standard that may result.
+
 ---

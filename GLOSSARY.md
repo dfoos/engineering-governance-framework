@@ -10,6 +10,16 @@ This glossary defines key terms used throughout the Engineering Governance Frame
 
 - **Standard**: A living document that defines current best practices, required patterns, and operational rules. Standards evolve over time and are versioned.
 
+- **Taxonomy**: The shared architecture classification used by ADRs and Standards to describe where a record belongs. Taxonomy values are not identifiers and are not required to be unique.
+
+- **Primary classification**: The durable architecture area that owns an ADR or Standard, such as Cloud Foundations or Data Platforms.
+
+- **Reusable classification**: An optional cross-cutting concern, such as Naming, Design, Security, or Testing and Validation, appended to a primary classification.
+
+- **Proposed taxonomy**: Optional RFC metadata suggesting the classification for an ADR or Standard that may result from the RFC. It does not classify the RFC.
+
+- **Registry**: The authoritative structured index for one document type. Registries provide the next available ID and support duplicate, relationship, and taxonomy validation.
+
 - **ARB (Architecture Review Board)**: A governance body responsible for reviewing and approving ADRs to ensure cross-domain alignment and architectural consistency.
 
 - **Standards Committee**: A governance body responsible for maintaining and updating Standards to ensure consistency and alignment across the organization.
@@ -26,7 +36,7 @@ This glossary defines key terms used throughout the Engineering Governance Frame
 
 - **Catalog**: A structured index of artifacts (e.g., Standards Catalog, ADR Catalog) that provides metadata and links to the full documents.
 
-- **Tagging**: The practice of applying metadata to artifacts to enable categorization, filtering, and cross-referencing.
+- **Label**: Optional metadata used for discovery, such as a technology or team name. Labels do not replace the taxonomy and are not a required classification system.
 
 ---
 

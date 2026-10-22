@@ -5,6 +5,10 @@ This document provides a high‑level view of how **RFCs**, **ADRs**, and **Stan
 The goal is simple:  
 **Make it obvious which artifact to use, when to use it, and how decisions flow through the system.**
 
+Use [taxonomy.md](taxonomy.md) as the authority for artifact organization. ADRs and
+Standards share a `DDDD.SSSS` architecture classification; RFCs remain
+sequential workflow records and may only suggest taxonomy for resulting records.
+
 ---
 
 # **Governance Flow Diagram**
@@ -110,6 +114,9 @@ The goal is simple:
 ```markdown
 RFC → ADR → Standard
 ```
+
+An RFC is not itself classified. When it produces an ADR or Standard, the
+resulting document receives its own permanent ID and taxonomy classification.
 
 ### **RFC → ADR**
 When discussion leads to a clear architectural choice.

@@ -1,6 +1,9 @@
-# Tag Index
+# Optional Label Index
 
-This document provides an index of all artifacts organized by their tags. Tags are listed alphabetically, with links to the associated artifacts.
+This document provides an optional index of artifacts by discovery labels.
+For authoritative organization, use the ADR and Standards registries and
+[governance/taxonomy.md](../governance/taxonomy.md). RFCs are not classified by
+taxonomy.
 
 ---
 
@@ -17,4 +20,6 @@ This document provides an index of all artifacts organized by their tags. Tags a
 
 ---
 
-To add a new artifact, ensure it is tagged appropriately and update this index accordingly.
+To add a label, ensure it is useful metadata and update this index when a
+maintained label view is needed. Do not treat labels as a replacement for
+taxonomy or document status.

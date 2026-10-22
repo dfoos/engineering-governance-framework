@@ -32,6 +32,7 @@ If the proposal only updates a Standard (not the underlying architecture), it go
 ## 3. Submission Process
 1. Author drafts an ADR using the ADR template  
 2. Team performs internal peer review  
+   - Confirm the ADR has a valid taxonomy classification from [governance/taxonomy.md](../governance/taxonomy.md)
 3. Author submits ADR via Pull Request to the `/adr` directory  
 4. ARB triages the ADR into one of three categories:
    - **A: No ARB Review Needed** (closed with comment)
@@ -110,6 +111,7 @@ ADR replaces a previous ADR. Both documents remain in the repo with cross‑refe
 Once approved:
 - ADR is merged into `/adr`  
 - ADR is indexed in the ADR catalog  
+- ADR taxonomy is recorded in the registry
 - Relevant Standards may be updated by the Standards Committee  
 
 ---

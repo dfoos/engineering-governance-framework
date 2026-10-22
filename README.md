@@ -9,6 +9,7 @@ Over time, this repo will become the single source of truth for:
 - **ARB workflows**  
 - **Standards Committee workflows**  
 - **Templates, examples, and governance guidance**
+- **Shared architecture taxonomy**
 
 The goal is simple:  
 **Make it easy for teams to understand how decisions are made, what standards they must follow, and how to propose changes without navigating a maze of Confluence pages and tribal knowledge.**
@@ -116,19 +117,42 @@ Use a Standard when:
 The ADR sets the direction.  
 The Standard defines the implementation.
 
+## **Architecture Taxonomy**
+
+The [architecture taxonomy](governance/taxonomy.md) organizes the governance
+library independently from document identity:
+
+- **ADRs** and **Standards** use the shared taxonomy to classify the
+  architectural concern they own.
+- **RFCs** remain sequential workflow records and do not receive taxonomy.
+  They may include an optional `proposed-taxonomy` for an ADR or Standard they
+  may produce.
+- Permanent document IDs (`ADR-####`, `STD-####`, and `RFC-####`) never change
+  when taxonomy evolves.
+- Taxonomy values are classifications, not unique identifiers; multiple ADRs
+  and Standards may share one.
+- Use optional labels for products, technologies, teams, or lifecycle
+  discovery. Labels do not replace taxonomy or document status.
+
+When creating or reviewing an ADR or Standard, choose the primary architecture
+classification first, then add a reusable classification only when it improves
+discovery. Search the taxonomy and existing registries before creating a new
+branch or record.
+
 ---
 
 # **Repository Structure**
 
 - [/README.md](README.md) — This landing page  
 - [/adr/](adr) — Architecture Decision Records  
+    - [/adr/catalog.md](adr/catalog.md)
     - [/adr/template.md](adr/template.md)  
-    - [/adr/index.md](adr/index.md)  
 - [/arb/](arb) — Architecture Review Board workflows & roles  
     - [/arb/workflow.md](arb/workflow.md)  
 - [/examples/](examples) — Example governance documents  
     - [/examples/virtual-app-hosting-example.md](examples/virtual-app-hosting-example.md)  
 - [/governance/](governance) — Governance overview docs  
+    - [/governance/taxonomy.md](governance/taxonomy.md)
     - [/governance/overview.md](governance/overview.md)  
     - [/governance/adr-lifecycle.md](governance/adr-lifecycle.md)  
     - [/governance/arb-membership.md](governance/arb-membership.md)  
@@ -141,14 +165,14 @@ The Standard defines the implementation.
     - [/guidance/do-i-need-a-standard.md](guidance/do-i-need-a-standard.md)  
     - [/guidance/do-i-need-an-adr.md](guidance/do-i-need-an-adr.md)  
 - [/rfc/](rfc) — Requests for Comment  
+    - [/rfc/catalog.md](rfc/catalog.md)
     - [/rfc/template.md](rfc/template.md)  
-    - [/rfc/index.md](rfc/index.md)  
 - [/standards/](standards) — Engineering Standards (living documents)  
+    - [/standards/catalog.md](standards/catalog.md)
     - [/standards/template.md](standards/template.md)  
-    - [/standards/index.md](standards/index.md)  
 - [/standards-committee/](standards-committee) — Standards Committee workflows & roles  
     - [/standards-committee/workflow.md](standards-committee/workflow.md)  
-- [/tags/](tags) — Tagging system for artifacts  
+- [/tags/](tags) — Optional metadata labels for artifact discovery
     - [/tags/README.md](tags/README.md)  
     - [/tags/tags.md](tags/tags.md)  
     - [/tags/standard.md](tags/standard.md)  

@@ -1,6 +1,6 @@
-# **Tagging Standard**
+# **Optional Metadata Labels**
 
-All RFCs, ADRs, and Standards must be tagged to improve searchability, discoverability, and cross-referencing. This standard defines the tagging rules, requirements, and governance.
+Labels are optional metadata for improving searchability and cross-referencing. They are not a required classification system. The shared architecture taxonomy in [governance/taxonomy.md](../governance/taxonomy.md) is authoritative for ADR and Standard organization.
 
 ---
 
@@ -19,11 +19,11 @@ Tags serve critical functions:
 ## **Tag Structure and Syntax**
 
 ### **Format**
-Tags are applied in a `tags:` field at the top of every RFC, ADR, and Standard file using YAML front matter:
+Labels MAY be applied in a `labels:` field using YAML front matter:
 
 ```yaml
 ---
-tags: [tag1, tag2, tag3, tag4]
+labels: [kubernetes, platform]
 ---
 
 # Title of the artifact
@@ -35,13 +35,13 @@ tags: [tag1, tag2, tag3, tag4]
 - Tags are short, typically 1–3 words
 - Multiple tags are comma-separated in a single list
 - No duplicate tags in one artifact
-- Only approved tags (see [tags.md](tags.md)) may be used
+- Prefer approved labels (see [tags.md](tags.md)); labels must not conflict with the document's status or taxonomy.
 
 ### **Example**
 
 ```yaml
 ---
-tags: [kubernetes, platform, tool-selection, high-impact, active]
+labels: [kubernetes, platform]
 ---
 
 # RFC: Kubernetes Platform Migration
@@ -49,67 +49,40 @@ tags: [kubernetes, platform, tool-selection, high-impact, active]
 
 ---
 
-## **Required Tags by Artifact Type**
+## **Taxonomy by Artifact Type**
 
 ### **RFCs (Requests for Comment)**
-Minimum tags required:
-
-- **One Category tag** (e.g., `tool-selection`, `pattern`, `migration`)
-- **One Lifecycle tag** (typically `proposed`)
-- **One Domain tag** (e.g., `platform`, `security`, `applications`)
-- **One Impact tag** (e.g., `high-impact`, `low-impact`)
-
-Optional tags:
-
-- Zero or more **Technology tags** (if the RFC discusses specific tech)
+RFCs use their permanent sequential ID and workflow `status`. They do not receive taxonomy. An RFC MAY include `proposed-taxonomy` to guide resulting ADRs or Standards, plus optional labels.
 
 **Example RFC tags**:
 ```yaml
-tags: [tool-selection, proposed, platform, high-impact]
-tags: [migration, proposed, cloud, org-wide, aws, kubernetes]
-tags: [policy, proposed, security, org-wide]
+labels: [kubernetes, platform]
+labels: [aws, kubernetes]
+labels: [security]
 ```
 
 ---
 
 ### **ADRs (Architecture Decision Records)**
-Minimum tags required:
-
-- **One Category tag** (e.g., `pattern`, `tool-selection`, `infrastructure`)
-- **One Lifecycle tag** (typically `active`, `superseded`, or `deprecated`)
-- **One Domain tag** (e.g., `platform`, `devops`, `networking`)
-- **One Impact tag** (e.g., `high-impact`, `org-wide`)
-
-Optional tags:
-
-- Zero or more **Technology tags** (if the ADR involves specific technologies)
+ADRs MUST include a valid `taxonomy`, `primary-classification`, and optional `reusable-classification` from [governance/taxonomy.md](../governance/taxonomy.md). Labels are optional.
 
 **Example ADR tags**:
 ```yaml
-tags: [pattern, active, platform, org-wide, kubernetes, terraform]
-tags: [tool-selection, active, devops, high-impact, github]
-tags: [deprecation, deprecated, cloud, aws]
+labels: [kubernetes, terraform]
+labels: [github, devops]
+labels: [aws, deprecation]
 ```
 
 ---
 
 ### **Standards**
-Minimum tags required:
-
-- **One Category tag** (e.g., `operational`, `naming-convention`, `security-baseline`)
-- **One Lifecycle tag** (typically `active` unless the standard is deprecated)
-- **One Domain tag** (e.g., `platform`, `identity`, `networking`)
-
-Optional tags:
-
-- **Impact tags** (use if the standard is org-wide or team-local)
-- **Technology tags** (if the standard is specific to a technology)
+Standards MUST include a valid `taxonomy`, `primary-classification`, and optional `reusable-classification` from [governance/taxonomy.md](../governance/taxonomy.md). Labels are optional.
 
 **Example Standard tags**:
 ```yaml
-tags: [naming-convention, active, platform]
-tags: [operational, active, security, org-wide]
-tags: [security-baseline, active, identity, org-wide]
+labels: [platform, naming-convention]
+labels: [security, operational]
+labels: [identity, security-baseline]
 ```
 
 ---
@@ -127,7 +100,7 @@ tags: [security-baseline, active, identity, org-wide]
 - Example: A decision about CI/CD infrastructure can be `devops` or `platform` (pick the most relevant)
 
 ### **Category Tags**
-- Every artifact must have exactly one category tag (or split artifacts if they span multiple categories)
+- Labels are optional and should not be used to encode taxonomy or status
 - Example: Do not use both `tool-selection` and `process` for one artifact; create separate RFCs/ADRs
 
 ### **Impact Tags**
@@ -146,7 +119,7 @@ tags: [security-baseline, active, identity, org-wide]
 ## **Versioning and Tag Maintenance**
 
 ### **Updating Tags**
-If an artifact's content or status changes, update its tags:
+If an artifact's content or status changes, update its labels when they are no longer accurate:
 
 - An ADR moving from `proposed` to `active` when approved by the ARB
 - A Standard updated from `active` to `deprecated` when scheduled for removal
@@ -158,7 +131,7 @@ All tag updates should be committed with a clear message explaining the change.
 Engineers can search for tags in multiple ways:
 
 - GitHub issue/PR search: `tag:kubernetes` (if using labels)
-- File grep: `grep "tags:.*kubernetes" *.md`
+- File grep: `grep "labels:.*kubernetes" *.md`
 - Repository documentation: Link to tagged collections in governance READMEs
 
 ---
@@ -189,7 +162,7 @@ Deprecated tags are phased out over time:
 ### **RFC: Kubernetes Adoption**
 ```yaml
 ---
-tags: [tool-selection, proposed, platform, org-wide, kubernetes, high-impact]
+labels: [kubernetes, platform]
 ---
 
 # RFC: Kubernetes as the Platform for Container Orchestration
@@ -198,7 +171,7 @@ tags: [tool-selection, proposed, platform, org-wide, kubernetes, high-impact]
 ### **ADR: Terraform Standardization**
 ```yaml
 ---
-tags: [pattern, active, platform, org-wide, terraform, infrastructure]
+labels: [terraform, platform]
 ---
 
 # ADR: All Infrastructure Provisioning Must Use Terraform
@@ -207,7 +180,7 @@ tags: [pattern, active, platform, org-wide, terraform, infrastructure]
 ### **Standard: DNS Naming Conventions**
 ```yaml
 ---
-tags: [naming-convention, active, networking]
+labels: [networking, naming-convention]
 ---
 
 # Standard: DNS Naming Conventions
@@ -216,7 +189,7 @@ tags: [naming-convention, active, networking]
 ### **Deprecated ADR: Legacy Docker Swarm**
 ```yaml
 ---
-tags: [tool-selection, superseded, platform, docker]
+labels: [docker, platform]
 ---
 
 # ADR: Docker Swarm for Container Orchestration
@@ -229,8 +202,8 @@ tags: [tool-selection, superseded, platform, docker]
 
 Starting immediately:
 
-- All new RFCs, ADRs, and Standards must include tags
-- Existing artifacts should be tagged during the next review cycle
+- Labels are optional for all RFCs, ADRs, and Standards
+- Existing artifacts need not be retrofitted with labels
 - The Standards Committee will audit tags quarterly and report trends
 - Missing or incorrect tags will be flagged during ARB/Standards Committee review
 

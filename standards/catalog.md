@@ -1,19 +1,23 @@
-# **Engineering Standards Catalog**
+# **Engineering Standards Registry**
 
-This catalog provides an overview of all current engineering standards. Each standard includes a brief description, its current version, and its status. Click on the title to view the full document.
+This is the authoritative registry for all current and historical Standards.
+It provides the next available permanent ID and supports duplicate detection,
+relationship checks, taxonomy validation, version tracking, and links to the
+full documents.
 
-| **ID** | **Title**                          | **Description**                                                                 | **Version** | **Status**   | **Last Updated** |
-|--------|------------------------------------|---------------------------------------------------------------------------------|-------------|--------------|------------------|
-| ST-001 | [Tagging Standard](tagging.md)     | Defines required tags, formats, and enforcement mechanisms for cloud resources. | 1.2         | Active       | 2026-03-01       |
-| ST-002 | [Terraform Module Standard](terraform.md) | Specifies module structure, backend configuration, and CI/CD patterns.          | 1.0         | Active       | 2026-02-15       |
-| ST-003 | [DNS Naming Standard](dns.md)      | Details the hierarchical DNS naming schema and allowed characters.              | 1.1         | Active       | 2026-01-20       |
-| ST-004 | [Firewall Rules Standard](firewall.md) | Outlines least-privilege principles for firewall rules and request requirements. | 2.0         | Deprecated   | 2025-12-10       |
-| ST-005 | [IAM and RBAC Standard](iam.md)    | Defines IAM and RBAC models, including roles, permissions, and security baselines. | 1.3         | Active       | 2026-03-10       |
+| **ID** | **Title**                          | **Description**                                                                 | **Version** | **Taxonomy** | **Status**   | **Last Updated** |
+|--------|------------------------------------|---------------------------------------------------------------------------------|-------------|--------------|--------------|------------------|
+| STD-0001 | [Tagging Standard](tagging.md)     | Defines required resource metadata and enforcement mechanisms. | 1.2 | `4300.2200` | Active | 2026-03-01 |
+| STD-0002 | [Terraform Module Standard](terraform.md) | Specifies module structure, backend configuration, and CI/CD patterns. | 1.0 | `9200.2300` | Active | 2026-02-15 |
+| STD-0003 | [DNS Naming Standard](dns.md)      | Details the hierarchical DNS naming schema and allowed characters. | 1.1 | `7100.2100` | Active | 2026-01-20 |
+| STD-0004 | [Firewall Rules Standard](firewall.md) | Outlines least-privilege principles for firewall rules and request requirements. | 2.0 | `7300.2700` | Deprecated | 2025-12-10 |
+| STD-0005 | [IAM and RBAC Standard](iam.md)    | Defines IAM and RBAC models, including roles, permissions, and security baselines. | 1.3 | `3200.2700` | Active | 2026-03-10 |
 
 ---
 
 ### **Key Fields**
-- **ID**: A unique identifier for the standard (e.g., ST-001).
+- **ID**: A permanent identifier for the Standard (e.g., STD-0001).
+- **Taxonomy**: The shared architecture classification for the Standard.
 - **Title**: The name of the standard, linked to the full document.
 - **Description**: A short summary of what the standard covers.
 - **Version**: The current version of the standard.
@@ -26,3 +30,5 @@ This catalog provides an overview of all current engineering standards. Each sta
 1. **Find a Standard**: Use the table above to locate the standard you need.
 2. **View Details**: Click on the title to view the full document.
 3. **Propose Changes**: To update or deprecate a standard, submit an RFC or ADR.
+
+Add every new Standard to this registry; do not create a separate index.

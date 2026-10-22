@@ -2,6 +2,10 @@
 
 This directory contains guidance to help teams determine whether they need to create an RFC, ADR, or Standard. It provides clarity on the purpose of each artifact and when to use them.
 
+When creating an ADR or Standard, also follow the shared architecture taxonomy
+in [../governance/taxonomy.md](../governance/taxonomy.md). RFCs do not receive
+taxonomy; use optional proposed taxonomy only to guide resulting records.
+
 ### **Purpose of Decision Guidance**
 - Help teams choose the right artifact for their needs.
 - Provide clear criteria for creating RFCs, ADRs, or Standards.

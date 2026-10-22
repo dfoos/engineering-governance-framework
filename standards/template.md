@@ -1,7 +1,18 @@
 # Engineering Standard
 
 ---
-tags: []
+id: STD-####
+title:
+status: draft
+version: 1.0
+taxonomy: DDDD.SSSS
+primary-classification:
+reusable-classification:
+owners: []
+related-adrs: []
+related-rfcs: []
+supersedes: null
+superseded-by: null
 ---
 
 **Standard Name:**  
@@ -12,6 +23,9 @@ tags: []
 **Related ADRs:**  
 **Related RFCs:**  
 **Related Jira Items / Documentation:**  
+**Taxonomy:** `DDDD.SSSS`
+**Primary Classification:**
+**Reusable Classification:** Optional
 
 ---
 
