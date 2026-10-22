@@ -1,7 +1,17 @@
 # Architecture Decision Record (ADR)
 
 ---
-tags: []
+id: ADR-####
+title:
+status: proposed
+taxonomy: DDDD.SSSS
+primary-classification:
+reusable-classification:
+owners: []
+related-rfcs: []
+related-standards: []
+supersedes: null
+superseded-by: null
 ---
 
 **Title:**  
@@ -12,6 +22,9 @@ tags: []
 **Contributor(s):**  
 **Target Audience:**  
 **Due By:**  
+**Taxonomy:** `DDDD.SSSS`
+**Primary Classification:**
+**Reusable Classification:** Optional
 
 ---
 

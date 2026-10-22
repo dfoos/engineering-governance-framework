@@ -1,7 +1,14 @@
 # Request for Comment (RFC)
 
 ---
-tags: []
+id: RFC-####
+title:
+status: draft
+owners: []
+proposed-taxonomy: null
+resulting-adrs: []
+resulting-standards: []
+labels: []
 ---
 
 **RFC ID:**  
@@ -11,6 +18,8 @@ tags: []
 **Related To:** (ADRs, RFCs, Jira items, Confluence pages, etc.)  
 **Urgency:** Low | Medium | High  
 **Date Created:**  
+**Status:** Draft | In Review | Approved | Rejected | Withdrawn | Superseded | Implemented
+**Proposed Taxonomy:** Optional guidance for resulting ADRs or Standards; this RFC is not classified by it.
 
 ---
 

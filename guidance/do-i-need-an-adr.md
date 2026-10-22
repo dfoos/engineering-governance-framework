@@ -137,4 +137,8 @@ If you’re on the fence:
 
 This keeps the process lightweight and avoids unnecessary churn.
 
+For an ADR, classify the architecture concern using the shared taxonomy. Select
+the owning primary classification and add a reusable classification only when
+it improves discovery. The taxonomy is not part of the permanent ADR ID.
+
 ---

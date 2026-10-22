@@ -4,43 +4,53 @@ This document defines the conventions for artifact IDs and filenames across ADRs
 
 ---
 
-## ADR Numbering Format
+## Permanent Document IDs
 
-- **Format**: `adr-<number>-<short-title>.md`
-- **Numbering**: Sequential, starting from `001`.
+Every document receives a permanent, sequential ID independent of its taxonomy:
+
+- ADR: `ADR-####`
+- Standard: `STD-####`
+- RFC: `RFC-####`
+
+IDs are never reused, including after rejection, withdrawal, supersession, or retirement. Taxonomy values must not be embedded in IDs or filenames.
+
+## ADR Filename Format
+
+- **Format**: `ADR-####-<short-title>.md`
+- **Numbering**: Sequential, starting from the next unused registry ID.
 - **Short Title**: A concise, hyphenated summary of the ADR's purpose.
-- **Example**: `adr-001-terraform-standardization.md`
+- **Example**: `ADR-0001-terraform-standardization.md`
 
 ### Rules:
-1. Numbers are zero-padded to three digits (e.g., `001`, `002`).
+1. Numbers are zero-padded to four digits (e.g., `0001`, `0002`).
 2. Titles must be lowercase, hyphenated, and descriptive.
 3. Avoid special characters or spaces in titles.
 
 ---
 
-## RFC Numbering Format
+## RFC Filename Format
 
-- **Format**: `rfc-<number>-<short-title>.md`
-- **Numbering**: Sequential, starting from `001`.
+- **Format**: `RFC-####-<short-title>.md`
+- **Numbering**: Sequential, starting from the next unused registry ID.
 - **Short Title**: A concise, hyphenated summary of the RFC's purpose.
-- **Example**: `rfc-001-cloud-governance.md`
+- **Example**: `RFC-0001-cloud-governance.md`
 
 ### Rules:
-1. Numbers are zero-padded to three digits (e.g., `001`, `002`).
+1. Numbers are zero-padded to four digits (e.g., `0001`, `0002`).
 2. Titles must be lowercase, hyphenated, and descriptive.
 3. Avoid special characters or spaces in titles.
 
 ---
 
-## Standard Naming/Versioning Format
+## Standard Filename Format
 
-- **Format**: `standard-<name>-v<version>.md`
+- **Format**: `STD-####-<short-title>.md`
 - **Versioning**: Semantic versioning (`v1.0`, `v2.1`, etc.).
 - **Name**: A concise, hyphenated summary of the standard's purpose.
-- **Example**: `standard-security-baseline-v1.0md`
+- **Example**: `STD-0001-security-baseline.md`
 
 ### Rules:
-1. Use semantic versioning to indicate updates.
+1. Keep the permanent `STD-####` ID unchanged when the Standard is updated.
    - **Major Version**: Increment the major version (e.g., `v1.0` → `v2.0`) when introducing breaking changes that are not backward compatible.
      - **Example**: A security baseline standard removes support for a deprecated encryption algorithm, requiring teams to update their configurations.
    - **Minor Version**: Increment the minor version (e.g., `v1.0` → `v1.1`) when adding new features or making backward-compatible improvements.
@@ -52,15 +62,15 @@ This document defines the conventions for artifact IDs and filenames across ADRs
 
 ## General File Naming Convention
 
-- **Format**: `<artifact-type>-<identifier>-<short-title>.md`
+- **Format**: `<artifact-type>-####-<short-title>.md`
 - **Artifact Types**: `adr`, `rfc`, `standard`.
-- **Identifier**: A unique number or version.
+- **Identifier**: The permanent four-digit document ID.
 - **Short Title**: A concise, hyphenated summary of the artifact's purpose.
 - **Example**: `adr-001-terraform-standardization.md`
 
 ### Rules:
 1. Use the appropriate artifact type prefix (`adr`, `rfc`, `standard`).
-2. Ensure filenames are unique within their category.
+2. Ensure filenames retain the permanent ID and are unique within their category.
 3. Avoid special characters, spaces, or uppercase letters.
 
 ---
@@ -68,8 +78,8 @@ This document defines the conventions for artifact IDs and filenames across ADRs
 ## Change Management
 
 1. **New Artifacts**: Follow the numbering and naming conventions when creating new artifacts.
-2. **Updates**: Increment the version for standards when making changes.
-3. **Deprecation**: Mark deprecated artifacts with a `deprecated` tag in their metadata.
+2. **Updates**: Keep the document ID and taxonomy stable unless governance explicitly changes them; update the Standard version and changelog.
+3. **Deprecation**: Record the status and replacement relationship in document metadata.
 
 ---
 

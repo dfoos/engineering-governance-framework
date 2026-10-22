@@ -9,32 +9,30 @@ This document outlines the lifecycle stages of a Request for Comments (RFC) arti
 1. **Proposed**
    - The RFC is under discussion and has not yet been approved.
    - Contributors can provide feedback and suggest changes.
-   - The RFC must include the `proposed` lifecycle tag.
+   - The RFC status is `draft` or `in-review`.
 
 2. **Approved**
-   - The RFC has been reviewed and accepted by the Standards Committee.
-   - The RFC is now considered an official governance artifact.
-   - The RFC must include the `active` lifecycle tag.
+   - The RFC has completed review and its proposal is approved for implementation or conversion into resulting records.
 
 3. **Superseded**
    - The RFC has been replaced by a newer decision or artifact.
-   - The RFC must include the `superseded` lifecycle tag and reference the new artifact.
+   - Set status to `superseded` and reference the replacement or resulting records.
 
 4. **Deprecated**
    - The RFC is scheduled for removal or is no longer recommended for use.
-   - The RFC must include the `deprecated` lifecycle tag.
+   - Set status to `deprecated` and provide a transition plan.
 
 5. **Archived**
    - The RFC is no longer active but is retained for historical reference.
-   - The RFC must include the `archived` lifecycle tag.
+   - Set status to `archived` and move it to the `archive/` directory when applicable.
 
 ---
 
 ## Change Management
 
-- **Superseding RFCs**: When an RFC is superseded, update its metadata to include the `superseded` tag and add a reference to the new RFC.
+- **Superseding RFCs**: When an RFC is superseded, update its status and add a reference to the replacement or resulting record.
 - **Deprecating RFCs**: When an RFC is deprecated, communicate the deprecation to all stakeholders and provide a transition plan.
-- **Archiving RFCs**: When an RFC is archived, ensure it is marked with the `archived` tag and moved to the `archive/` directory.
+- **Archiving RFCs**: When an RFC is archived, set its status to `archived` and move it to the `archive/` directory when applicable.
 
 ---
 

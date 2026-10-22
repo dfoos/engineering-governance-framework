@@ -10,7 +10,7 @@ Artifacts are archived when they are no longer active but need to be retained fo
 
 ### Process:
 1. **Mark the Artifact as Archived**:
-   - Add the `archived` lifecycle tag to the metadata.
+   - Set the document `status` to `archived`.
    - Include a justification for archiving the artifact.
 
 2. **Move the Artifact to the Archive Directory**:
@@ -19,9 +19,9 @@ Artifacts are archived when they are no longer active but need to be retained fo
      - RFCs: `rfc/archive/`
      - Standards: `standards/archive/`
 
-3. **Update Indexes**:
-   - Remove the artifact from the active index.
-   - Add the artifact to the archive index for its type.
+3. **Update Registries**:
+   - Mark the artifact archived in its type registry.
+   - Keep the historical entry available with its archive location.
 
 ---
 

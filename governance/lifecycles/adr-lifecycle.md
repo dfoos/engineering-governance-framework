@@ -41,7 +41,7 @@ The author drafts the ADR using the approved template.
 Activities include:
 - Internal team peer review  
 - Ensuring the ADR is necessary (per “Do I Need an ADR?”)  
-- Adding tags  
+- Assigning a valid taxonomy classification and linking related records
 - Linking RFCs or supporting documentation  
 
 **Exit Criteria:**  
@@ -117,7 +117,7 @@ If ARB requests changes:
 Once approved:
 - ADR is merged into `/adr`  
 - Status updated to **Accepted**  
-- Tags validated  
+- Taxonomy validated against [taxonomy.md](../taxonomy.md)
 - ADR added to the ADR index  
 - Linked Standards flagged for update (if required)
 

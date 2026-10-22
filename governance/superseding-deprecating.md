@@ -14,7 +14,7 @@ Superseding occurs when an artifact is replaced by a newer version or a differen
    - Ensure the new artifact references the artifact it is superseding.
 
 2. **Update the Superseded Artifact**:
-   - Add the `superseded` lifecycle tag to the metadata.
+   - Set the document `status` to `superseded` and populate `superseded-by`.
    - Include a reference to the new artifact in the superseded artifact.
 
 3. **Communicate the Change**:
@@ -29,7 +29,7 @@ Deprecating occurs when an artifact is no longer recommended for use and is sche
 
 ### Process:
 1. **Mark the Artifact as Deprecated**:
-   - Add the `deprecated` lifecycle tag to the metadata.
+   - Set the document `status` to `deprecated` and document any replacement.
    - Include a justification for the deprecation and any replacement artifacts.
 
 2. **Communicate the Deprecation**:
@@ -37,7 +37,7 @@ Deprecating occurs when an artifact is no longer recommended for use and is sche
    - Provide a transition plan and timeline for removal.
 
 3. **Remove the Artifact**:
-   - After the transition period, move the artifact to the `archive/` directory or delete it if no longer needed.
+   - After the transition period, set the document `status` to `archived` and move it to the appropriate archive directory when applicable.
 
 ---
 
